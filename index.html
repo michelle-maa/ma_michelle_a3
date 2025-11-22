@@ -69,9 +69,35 @@
         margin: 0 auto;
         width: 1200px;
       } 
-      .center {
+      .header-center {
         position: absolute;
         top: 15%; 
+        width: 1200px; 
+        text-align: center;
+        margin: 0 auto;
+      }
+      
+      .learn-more-button {
+        position: absolute;
+        background-color: #434343;
+        color: white; 
+        font-family: "Crimson Pro", serif;
+        font-size: 25px; 
+        padding-top: 20px; 
+        padding-bottom: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+        border: none; 
+        border-radius: 10px; 
+        cursor: pointer; 
+      }
+      
+      .learn-more-button:hover {
+        background-color: #242424; 
+      }
+       .button-center {
+        position: absolute;
+        top: 65%; 
         width: 1200px; 
         text-align: center;
         margin: 0 auto;
@@ -83,8 +109,11 @@
     <div class="container">
         <img src="photos/bg-image.png" alt="Background Image" style="width:1200px;" align="center">
       </div>
-    <div class="center">
+    <div class="header-center">
         <img src="photos/portfolio-header.png" alt="Michelle Ma - Portfolio" style="width:80%;" align="center">
+      </div>
+    <div class="button-center">
+     <button class="learn-more-button">Learn More</button>
       </div>
       <nav>
         <ul>
@@ -109,5 +138,6 @@
           </li>
         </ul>
       </nav>
+  
   </body>
 </html>
