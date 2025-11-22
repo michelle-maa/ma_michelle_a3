@@ -19,6 +19,7 @@
       
       body {
         width: 1200px;
+        place-items: center;
       }
 
       nav {
@@ -26,7 +27,6 @@
         top: 0;
         width: 100%;
         margin: 0 auto;
-        padding-left: 60;
         text-align: center;
       }
 
@@ -42,7 +42,7 @@
 
       li {
         display: inline-block;
-        margin-right: 15px;
+        margin-right: 80px;
       }
 
       li:last-child {
@@ -58,20 +58,34 @@
         text-decoration: underline;
       }
 
-      .bg {
-        background-image: url('photos/7S3A5958.jpg');
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: brightness(40%);
+      
+      img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .container {
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        width: 1200px;
+      } 
+      .center {
+        position: absolute;
+        top: 15%; 
+        width: 1200px; 
+        text-align: center;
+        margin: 0 auto;
       }
       
     </style>
   </head>
   <body>
-      <div class="bg"></div>
-
+    <div class="container">
+        <img src="photos/bg-image.png" alt="Background Image" style="width:1200px;" align="center">
+      </div>
+    <div class="center">
+        <img src="photos/portfolio-header.png" alt="Michelle Ma - Portfolio" style="width:80%;" align="center">
+      </div>
       <nav>
         <ul>
           <li>
