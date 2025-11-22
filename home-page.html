@@ -69,12 +69,51 @@
         margin: 0 auto;
         width: 1200px;
       } 
-      .center {
+      .header-center {
         position: absolute;
-        top: 15%; 
+        top: 10%; 
         width: 1200px; 
         text-align: center;
         margin: 0 auto;
+      }
+      
+      .learn-more-button {
+        position: absolute;
+        background-color: #434343;
+        color: white; 
+        font-family: "Crimson Pro", serif;
+        font-size: 25px;
+        padding: 15px 40px;
+        border: none; 
+        border-radius: 15px; 
+        cursor: pointer; 
+      }
+      
+      .learn-more-button:hover {
+        background-color: #232323; 
+      }
+       .button-center {
+        position: absolute;
+        top: 65%; 
+        width: 1200px; 
+        text-align: center;
+        margin: 0 auto;
+        display: flex; 
+        justify-content: center;
+      }
+      .contact-button {
+        position: absolute;
+        top: 80%; 
+        width: 1200px;
+        margin: 0 auto;
+        display: grid; 
+        grid-template-columns: 8% 8% 8%;
+        gap: 30px; 
+        justify-content: center;
+      }
+      
+      .contact-button img {
+        cursor: pointer;
       }
       
     </style>
@@ -83,9 +122,19 @@
     <div class="container">
         <img src="photos/bg-image.png" alt="Background Image" style="width:1200px;" align="center">
       </div>
-    <div class="center">
-        <img src="photos/portfolio-header.png" alt="Michelle Ma - Portfolio" style="width:80%;" align="center">
+    <div class="header-center">
+        <img src="photos/portfolio-header.svg" alt="Michelle Ma - Portfolio" style="width:80%;" align="center">
       </div>
+    <div class="button-center">
+     <button class="learn-more-button">Learn More</button>
+      </div>
+    <div class="contact-button">
+      <img src="photos/email.svg" alt="Email" style="width:70%">
+      <img src="photos/linkedin.svg" alt="LinkedIn" style="width:70%">
+      <img src="photos/instagram.svg" alt="Instagram" style="width:70%">
+    </div>
+    
+    
       <nav>
         <ul>
           <li>
@@ -109,5 +158,6 @@
           </li>
         </ul>
       </nav>
+  
   </body>
 </html>
