@@ -59,15 +59,28 @@
 
       
       img {
-        position: absolute;
         margin-left: auto;
         margin-right: auto;
-        
       }
+      .container {
+        position: relative;
+      } 
+      .center {
+        position: absolute;
+        top: 20%; 
+        width: 100%; 
+        text-align: center;
+      }
+      
     </style>
   </head>
   <body>
-        <img src="photos/bg-image.png" alt="Michelle Ma - Portfolio" style="width:1200px;" align="center">
+    <div class="container">
+        <img src="photos/bg-image.png" alt="Background Image" style="width:1200px;" align="center">
+      </div>
+    <div class="center">
+        <img src="photos/portfolio-header.png" alt="Michelle Ma - Portfolio" style="width:70%;" align="center">
+      </div>
       <nav>
         <ul>
           <li>
@@ -91,6 +104,5 @@
           </li>
         </ul>
       </nav>
-    <img src="photos/portfolio-header.png" alt="Michelle Ma - Portfolio" style="width:70%;" align="center">
   </body>
 </html>
