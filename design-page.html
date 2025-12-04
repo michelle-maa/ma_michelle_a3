@@ -83,6 +83,37 @@
         justify-content: center;
         margin-bottom: 50px;
       }
+      
+      .magazine-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;              /* space between image and text */
+        margin-top: 20px;
+      }
+      
+      .magazine-left {
+        max-width: 800px;
+      }
+      
+      .body-text {
+        color: white; 
+        text-align: left; 
+      }
+      
+      .body-text h2 {
+        font-family: "Crimson Pro", serif;
+        font-weight: <weight>;
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+      
+      .body-text p {
+        font-family: "Figtree", sans-serif;
+        font-size: 20px;
+        line-height: 1.4;
+        margin-top: 0;
+      }
 
 
       /* image carousel (code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow) */
@@ -90,7 +121,7 @@
       .mySlides {display: none}
       
       .magazine-carousel-container {
-        max-width: 500px;
+        max-width: 800px;
         position: relative;
         margin: 0;
       }
@@ -201,7 +232,11 @@
       <img src="photos/Header-Divider.svg" alt="Header Divider" style="width:100%;" align="center">
     </div>
       
-      
+      <div class="magazine-section">
+        
+      <div class=".magazine-left">
+        
+  
       <div class="magazine-carousel-container">
 
 <div class="mySlides fade">
@@ -260,6 +295,7 @@
   <span class="dot" onclick="currentSlide(7)"></span> 
   <span class="dot" onclick="currentSlide(8)"></span> 
 </div>
+    
 
 <script>
 let slideIndex = 1;
@@ -289,7 +325,19 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script> 
+  </div>
+    <div class="body-text">
+      <h2>GBDA 101 - Magazine Design</h2>
+    <p>
+      This design assignment was created using InDesign and is composed of a
+      collection of my photographs and a personal reflection.
+    </p>
       
+      <p>
+        <i>April 2025</i>
+      </p>
+        </div>
+  </div> 
       
     </div>
     <nav>
