@@ -10,13 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <style>
-
       html {
         background-color: black;
-        width: 1440px; 
+        width: 1440px;
         margin: 0 auto;
       }
-      
+
       body {
         width: 1200px;
         place-items: center;
@@ -59,68 +58,263 @@
       ul li a:hover {
         text-decoration: underline;
       }
-      
+
       .container {
         position: relative;
         text-align: center;
         margin: 0 auto;
         width: 1200px;
-      } 
-      
+      }
+
       .header {
         width: 1200px;
         height: 220px;
         margin-top: 50px;
-        display: flex; 
+        display: flex;
         align-items: center;
-        justify-content: center; 
-      }
-      
-      .header-divider {
-        width: 1200px; 
-        height: 5px; 
-        display: flex; 
-        align-items: center; 
         justify-content: center;
       }
 
+      .header-divider {
+        width: 1200px;
+        height: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
+
+      /* image carousel (code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow) */
+
+      .mySlides {display: none}
       
+      .magazine-carousel-container {
+        max-width: 500px;
+        position: relative;
+        margin: 0;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "previous" button to the left */
+      .prev {
+        left: 0;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Number text (1/8) */
+      .numbertext {
+        color: white;
+        font-size: 15px;
+        padding: 5px 5px;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      /* Dots container aligned with the carousel */
+      .carousel-dots {
+        max-width: 500px;   
+        margin-top: 10px;    
+        text-align: center;  
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
-        
+
+    <div class="header">
+      <img src="photos/Designs-Header.svg" alt="Videography Header" style="width:35%;" align="center">
     </div>
-      <div class="header">
-        <img src="photos/Designs-Header.svg" alt="Videography Header" style="width:35%;" align="center">
-    </div>
-    
+
     <div class="header-divider">
-        <img src="photos/Header-Divider.svg" alt="Header Divider" style="width:100%;" align="center">
+      <img src="photos/Header-Divider.svg" alt="Header Divider" style="width:100%;" align="center">
     </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="home-page.html"> Home</a>
-          </li>
+      
+      
+      <div class="magazine-carousel-container">
 
-          <li>
-            <a href="design-page.html"> Design</a>
-          </li>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <img src="photos/magazine-1.jpg" alt="Magazine Page 1" style="width:100%">
+</div>
 
-          <li>
-            <a href="photography-page.html"> Photography</a>
-          </li>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 8</div>
+  <img src="photos/magazine-2.jpg" alt="Magazine Page 2" style="width:100%">
+</div>
 
-          <li>
-            <a href="videography-page.html"> Videography</a>
-          </li>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <img src="photos/magazine-3.jpg" alt="Magazine Page 3" style="width:100%">
+</div>
+        
+<div class="mySlides fade">
+  <div class="numbertext"> 4 / 8</div>
+  <img src="photos/magazine-4.jpg" alt="Magazine Page 4" style="width:100%">
+</div>
+        
+<div class="mySlides fade">
+  <div class="numbertext"> 5 / 8</div>
+  <img src="photos/magazine-5.jpg" alt="Magazine Page 5" style="width:100%">
+</div>
+        
+<div class="mySlides fade">
+  <div class="numbertext"> 6 / 8</div>
+  <img src="photos/magazine-6.jpg" alt="Magazine Page 6" style="width:100%">
+</div>
+        
+<div class="mySlides fade">
+  <div class="numbertext"> 7 / 8</div>
+  <img src="photos/magazine-7.jpg" alt="Magazine Page 7" style="width:100%">
+</div>
+        
+<div class="mySlides fade">
+  <div class="numbertext"> 8 / 8</div>
+  <img src="photos/magazine-8.jpg" alt="Magazine Page 8" style="width:100%">
+</div>
 
-          <li>
-            <a href="about-me-page.html"> About Me</a>
-          </li>
-        </ul>
-      </nav>
-  
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div class="carousel-dots">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script> 
+      
+      
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="home-page.html"> Home</a>
+        </li>
+
+        <li>
+          <a href="design-page.html"> Design</a>
+        </li>
+
+        <li>
+          <a href="photography-page.html"> Photography</a>
+        </li>
+
+        <li>
+          <a href="videography-page.html"> Videography</a>
+        </li>
+
+        <li>
+          <a href="about-me-page.html"> About Me</a>
+        </li>
+      </ul>
+    </nav>
+
   </body>
 </html>
