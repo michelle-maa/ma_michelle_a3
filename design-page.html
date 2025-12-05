@@ -83,23 +83,20 @@
         justify-content: center;
         margin-bottom: 50px;
       }
-      
-      .magazine-section {
+
+      .divider {
+        width: 1200px;
         display: flex;
-        align-items: flex-start;
-        gap: 40px;              /* space between image and text */
-        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        margin: 60px 0;
       }
-      
-      .magazine-left {
-        max-width: 800px;
-      }
-      
+
       .body-text {
-        color: white; 
-        text-align: left; 
+        color: white;
+        text-align: left;
       }
-      
+
       .body-text h2 {
         font-family: "Crimson Pro", serif;
         font-weight: <weight>;
@@ -107,7 +104,7 @@
         margin-top: 0;
         margin-bottom: 20px;
       }
-      
+
       .body-text p {
         font-family: "Figtree", sans-serif;
         font-size: 20px;
@@ -118,12 +115,59 @@
 
       /* image carousel (code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow) */
 
-      .mySlides {display: none}
-      
+      /* Magazine */
+
+      .magazine-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 20px;
+      }
+
+      .magazine-left {
+        max-width: 800px;
+      }
+
       .magazine-carousel-container {
         max-width: 800px;
         position: relative;
         margin: 0;
+      }
+
+      /* Dots container aligned with the carousel */
+      .carousel-dots {
+        max-width: 500px;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      /* PoPo Recap */
+
+      .popo-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .popo-carousel-container {
+        max-width: 800px;
+        position: relative;
+        margin-left: auto;
+      }
+
+      .carousel-dots2 {
+        max-width: 800px;
+        margin-top: 30px;
+        text-align: center;
+        margin-left: auto;
+      }
+
+      /* SHARED CAROUSEL STYLES (MAGAZINE AND POPO) */
+
+      .mySlides1,
+      .mySlides2 {
+        display: none
       }
 
       /* Next & previous buttons */
@@ -141,13 +185,14 @@
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
         user-select: none;
+        z-index: 5;
       }
 
       /* Position the "previous" button to the left */
       .prev {
         left: 0;
       }
-      
+
       /* Position the "next button" to the right */
       .next {
         right: 0;
@@ -170,15 +215,10 @@
         background-color: rgba(0, 0, 0, 0.5);
       }
 
-      /* Dots container aligned with the carousel */
-      .carousel-dots {
-        max-width: 500px;   
-        margin-top: 10px;    
-        text-align: center;  
-      }
-      
+
       /* The dots/bullets/indicators */
-      .dot {
+      .dot1,
+      .dot2 {
         cursor: pointer;
         height: 15px;
         width: 15px;
@@ -224,122 +264,244 @@
   <body>
     <div class="container">
 
-    <div class="header">
-      <img src="photos/Designs-Header.svg" alt="Videography Header" style="width:35%;" align="center">
-    </div>
+      <div class="header">
+        <img src="photos/Designs-Header.svg" alt="Videography Header" style="width:35%;" align="center">
+      </div>
 
-    <div class="header-divider">
-      <img src="photos/Header-Divider.svg" alt="Header Divider" style="width:100%;" align="center">
-    </div>
-      
+      <div class="header-divider">
+        <img src="photos/Header-Divider.svg" alt="Header Divider" style="width:100%;" align="center">
+      </div>
+
       <div class="magazine-section">
-        
-      <div class=".magazine-left">
-        
-  
-      <div class="magazine-carousel-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 8</div>
-  <img src="photos/magazine-1.jpg" alt="Magazine Page 1" style="width:100%">
-</div>
+        <div class="magazine-left">
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 8</div>
-  <img src="photos/magazine-2.jpg" alt="Magazine Page 2" style="width:100%">
-</div>
+          <!-- magazine image carousel-->
+          <div class="magazine-carousel-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 8</div>
-  <img src="photos/magazine-3.jpg" alt="Magazine Page 3" style="width:100%">
-</div>
-        
-<div class="mySlides fade">
-  <div class="numbertext"> 4 / 8</div>
-  <img src="photos/magazine-4.jpg" alt="Magazine Page 4" style="width:100%">
-</div>
-        
-<div class="mySlides fade">
-  <div class="numbertext"> 5 / 8</div>
-  <img src="photos/magazine-5.jpg" alt="Magazine Page 5" style="width:100%">
-</div>
-        
-<div class="mySlides fade">
-  <div class="numbertext"> 6 / 8</div>
-  <img src="photos/magazine-6.jpg" alt="Magazine Page 6" style="width:100%">
-</div>
-        
-<div class="mySlides fade">
-  <div class="numbertext"> 7 / 8</div>
-  <img src="photos/magazine-7.jpg" alt="Magazine Page 7" style="width:100%">
-</div>
-        
-<div class="mySlides fade">
-  <div class="numbertext"> 8 / 8</div>
-  <img src="photos/magazine-8.jpg" alt="Magazine Page 8" style="width:100%">
-</div>
+            <div class="mySlides1 fade">
+              <div class="numbertext">1 / 8</div>
+              <img src="photos/magazine-1.jpg" alt="Magazine Page 1" style="width:100%">
+            </div>
 
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+            <div class="mySlides1 fade">
+              <div class="numbertext">2 / 8</div>
+              <img src="photos/magazine-2.jpg" alt="Magazine Page 2" style="width:100%">
+            </div>
 
-</div>
-<br>
+            <div class="mySlides1 fade">
+              <div class="numbertext">3 / 8</div>
+              <img src="photos/magazine-3.jpg" alt="Magazine Page 3" style="width:100%">
+            </div>
 
-<div class="carousel-dots">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-  <span class="dot" onclick="currentSlide(4)"></span> 
-  <span class="dot" onclick="currentSlide(5)"></span> 
-  <span class="dot" onclick="currentSlide(6)"></span> 
-  <span class="dot" onclick="currentSlide(7)"></span> 
-  <span class="dot" onclick="currentSlide(8)"></span> 
-</div>
-    
+            <div class="mySlides1 fade">
+              <div class="numbertext"> 4 / 8</div>
+              <img src="photos/magazine-4.jpg" alt="Magazine Page 4" style="width:100%">
+            </div>
 
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
+            <div class="mySlides1 fade">
+              <div class="numbertext"> 5 / 8</div>
+              <img src="photos/magazine-5.jpg" alt="Magazine Page 5" style="width:100%">
+            </div>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+            <div class="mySlides1 fade">
+              <div class="numbertext"> 6 / 8</div>
+              <img src="photos/magazine-6.jpg" alt="Magazine Page 6" style="width:100%">
+            </div>
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+            <div class="mySlides1 fade">
+              <div class="numbertext"> 7 / 8</div>
+              <img src="photos/magazine-7.jpg" alt="Magazine Page 7" style="width:100%">
+            </div>
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script> 
-  </div>
-    <div class="body-text">
-      <h2>GBDA 101 - Magazine Design</h2>
-    <p>
-      This design assignment was created using InDesign and is composed of a
-      collection of my photographs and a personal reflection.
-    </p>
-      
-      <p>
-        <i>April 2025</i>
-      </p>
+            <div class="mySlides1 fade">
+              <div class="numbertext"> 8 / 8</div>
+              <img src="photos/magazine-8.jpg" alt="Magazine Page 8" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+          </div>
+          <br>
+
+          <div class="carousel-dots">
+            <span class="dot1" onclick="currentSlide(1)"></span>
+            <span class="dot1" onclick="currentSlide(2)"></span>
+            <span class="dot1" onclick="currentSlide(3)"></span>
+            <span class="dot1" onclick="currentSlide(4)"></span>
+            <span class="dot1" onclick="currentSlide(5)"></span>
+            <span class="dot1" onclick="currentSlide(6)"></span>
+            <span class="dot1" onclick="currentSlide(7)"></span>
+            <span class="dot1" onclick="currentSlide(8)"></span>
+          </div>
+
         </div>
-  </div> 
-      
+        <div class="body-text">
+          <h2>GBDA 101 - Magazine Design</h2>
+          <p>
+            This design assignment was created using InDesign and is composed of a
+            collection of my photographs and a personal reflection.
+          </p>
+
+          <p>
+            <i>April 2025</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="divider">
+        <img src="photos/line.svg" alt="line divider">
+      </div>
+
+      <img src="photos/icon-design.png" alt="icon designs" style="margin-bottom: 30px; width: 95%">
+
+      <div class="body-text">
+        <h2>GBDA 101 - Icon Design</h2>
+
+        <p>
+          This icon assignment was created using Illustrator. 
+        </p>
+
+        <p>
+          <i>February 2025</i>
+        </p>
+      </div>
+
+      <div class="divider">
+        <img src="photos/line.svg" alt="line divider">
+      </div>
+
+      <div class="popo-section">
+
+        <div class="body-text">
+          <h2>UWVSA Pokémon Pottery Recap Post</h2>
+          <p>
+            Photographed and composed images into an Instagram post for UWVSA's
+            Pokémon Pottery event. Photos were edited in Lightroom and the collage
+            was created using Figma.
+          </p>
+          
+          <p><i>November 2025</i></p>
+        </div>
+          <div class="popo-carousel-container">
+
+          <div class="mySlides2 fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="photos/popo-recap-1.png" alt="PoPo Recap Post 1" style="width:100%">
+          </div>
+
+          <div class="mySlides2 fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="photos/popo-recap-2.png" alt="PoPo Recap Post 2" style="width:100%">
+          </div>
+
+          <div class="mySlides2 fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="photos/popo-recap-3.png" alt="PoPo Recap Post 3" style="width:100%">
+          </div>
+            
+          <div class="mySlides2 fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="photos/popo-recap-4.png" alt="PoPo Recap Post 4" style="width:100%">
+          </div>
+            
+          <div class="mySlides2 fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="photos/popo-recap-5.png" alt="PoPo Recap Post 5" style="width:100%">
+          </div>
+            
+          <div class="mySlides2 fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="photos/popo-recap-5.png" alt="PoPo Recap Post 6" style="width:100%">
+          </div>
+
+          <a class="prev" onclick="plusSlides2(-1)">❮</a>
+          <a class="next" onclick="plusSlides2(1)">❯</a>
+
+          <div class="carousel-dots2">
+            <span class="dot2" onclick="currentSlide2(1)"></span>
+            <span class="dot2" onclick="currentSlide2(2)"></span>
+            <span class="dot2" onclick="currentSlide2(3)"></span>
+            <span class="dot2" onclick="currentSlide2(4)"></span>
+            <span class="dot2" onclick="currentSlide2(5)"></span>
+            <span class="dot2" onclick="currentSlide2(6)"></span>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+
     </div>
+
+    <!-- SCRIPTS FOR IMAGE CAROUSEL-->
+    <script>
+      // First carousel (Magazine)
+      let slideIndex1 = 1;
+      showSlides1(slideIndex1);
+
+      function plusSlides1 (n) {
+        showSlides1(slideIndex1 += n);
+      }
+
+      function currentSlide1 (n) {
+        showSlides1(slideIndex1 = n);
+      }
+
+      function showSlides1 (n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides1");
+        let dots = document.getElementsByClassName("dot1");
+        if (n > slides.length) {
+          slideIndex1 = 1;
+        }
+        if (n < 1) {
+          slideIndex1 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex1 - 1].style.display = "block";
+        dots[slideIndex1 - 1].className += " active";
+      }
+
+      // Second carousel (PoPo Recap)
+      let slideIndex2 = 1;
+      showSlides2(slideIndex2);
+
+      function plusSlides2 (n) {
+        showSlides2(slideIndex2 += n);
+      }
+
+      function currentSlide2 (n) {
+        showSlides2(slideIndex2 = n);
+      }
+
+      function showSlides2 (n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides2");
+        let dots = document.getElementsByClassName("dot2");
+        if (n > slides.length) {
+          slideIndex2 = 1;
+        }
+        if (n < 1) {
+          slideIndex2 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex2 - 1].style.display = "block";
+        dots[slideIndex2 - 1].className += " active";
+      }
+    </script>
+
     <nav>
       <ul>
         <li>
